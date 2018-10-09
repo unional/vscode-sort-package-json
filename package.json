@@ -1,43 +1,51 @@
 {
-    "name": "vscode-sort-package-json",
-    "displayName": "Sort package.json",
-    "description": "Sort package.json",
-    "version": "1.0.0",
-    "publisher": "unional",
-    "engines": {
-        "vscode": "^1.28.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onCommand:editor.sortPackageJson"
-    ],
-    "main": "./out/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "editor.sortPackageJson",
-                "title": "Sort package.json"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "@types/mocha": "^5.2.5",
-        "@types/node": "^10.11.6",
-        "tslint": "^5.11.0",
-        "tslint-config-unional": "^0.9.6",
-        "typescript": "^3.1.1",
-        "vscode": "^1.1.21"
-    },
-    "dependencies": {
-        "sort-package-json": "^1.15.0"
-    }
+  "name": "vscode-sort-package-json",
+  "version": "1.0.0",
+  "description": "Sort package.json",
+  "homepage": "https://github.com/unional/vscode-sort-package-json#readme",
+  "bugs": {
+    "url": "https://github.com/unional/vscode-sort-package-json/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unional/vscode-sort-package-json.git"
+  },
+  "main": "./out/extension",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
+    "vscode:prepublish": "npm run compile",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "sort-package-json": "^1.15.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.11.6",
+    "tslint": "^5.11.0",
+    "tslint-config-unional": "^0.9.6",
+    "typescript": "^3.1.1",
+    "vscode": "^1.1.21"
+  },
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "activationEvents": [
+    "onCommand:editor.sortPackageJson"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "editor.sortPackageJson",
+        "title": "Sort package.json"
+      }
+    ]
+  },
+  "displayName": "Sort package.json",
+  "publisher": "unional"
 }
