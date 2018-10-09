@@ -1,6 +1,6 @@
 {
   "name": "vscode-sort-package-json",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Sort package.json",
   "homepage": "https://github.com/unional/vscode-sort-package-json#readme",
   "bugs": {
