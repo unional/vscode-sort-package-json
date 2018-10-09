@@ -2,7 +2,7 @@
     "name": "vscode-sort-package-json",
     "displayName": "Sort package.json",
     "description": "Sort package.json",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "unional",
     "engines": {
         "vscode": "^1.28.0"
