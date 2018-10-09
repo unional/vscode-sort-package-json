@@ -30,7 +30,7 @@
     "vscode": "^1.1.21"
   },
   "engines": {
-    "vscode": "^1.28.0"
+    "vscode": "^1.25.0"
   },
   "activationEvents": [
     "onCommand:editor.sortPackageJson"
