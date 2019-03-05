@@ -19,15 +19,19 @@
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
-    "sort-package-json": "^1.15.0"
+    "read-pkg-up": "^4.0.0",
+    "resolve": "^1.10.0",
+    "sort-package-json": "^1.21.0"
   },
   "devDependencies": {
-    "@types/mocha": "^5.2.5",
-    "@types/node": "^10.11.6",
-    "tslint": "^5.11.0",
-    "tslint-config-unional": "^0.9.6",
-    "typescript": "^3.1.1",
-    "vscode": "^1.1.21"
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.10.4",
+    "@types/read-pkg-up": "^3.0.1",
+    "@types/resolve": "0.0.8",
+    "tslint": "^5.13.1",
+    "tslint-config-unional": "^0.10.0",
+    "typescript": "^3.3.3333",
+    "vscode": "^1.1.30"
   },
   "engines": {
     "vscode": "^1.25.0"

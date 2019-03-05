@@ -1,5 +1,5 @@
-import sort from 'sort-package-json'
-import vscode, { TextEditor, TextEditorEdit } from 'vscode'
+import vscode, { TextEditor, TextEditorEdit } from 'vscode';
+import { getSortFn } from './getSortFn';
 
 export function sortPackageJson(textEditor: TextEditor, edit: TextEditorEdit) {
   if (!textEditor.document.fileName.endsWith('package.json')) {
@@ -11,6 +11,7 @@ export function sortPackageJson(textEditor: TextEditor, edit: TextEditorEdit) {
   const json = tryParseJson(text)
 
   if (json) {
+    const sort = getSortFn(json, textEditor.document.fileName)
     edit.replace(getWholeTextRange(textEditor), JSON.stringify(sort(json), null, 2))
   }
 }
