@@ -12,7 +12,7 @@ export function sortPackageJson(textEditor: TextEditor, edit: TextEditorEdit) {
 
   if (json) {
     const sort = getSortFn(json, textEditor.document.fileName)
-    edit.replace(getWholeTextRange(textEditor), JSON.stringify(sort(json), null, 2))
+    edit.replace(getWholeTextRange(textEditor), JSON.stringify(sort(json), null, 2) + '\n')
   }
 }
 
