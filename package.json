@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "publisher": "unional",
-  "main": "../out/extension.js",
+  "main": "./out/extension.js",
   "scripts": {
     "compile": "tsc",
     "postinstall": "node ./node_modules/vscode/bin/install",
