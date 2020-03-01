@@ -1,7 +1,11 @@
 {
   "name": "vscode-sort-package-json",
+  "displayName": "Sort package.json",
   "version": "1.2.0",
   "description": "Sort package.json",
+  "categories": [
+    "Other"
+  ],
   "homepage": "https://github.com/unional/vscode-sort-package-json#readme",
   "bugs": {
     "url": "https://github.com/unional/vscode-sort-package-json/issues"
@@ -10,38 +14,19 @@
     "type": "git",
     "url": "git+https://github.com/unional/vscode-sort-package-json.git"
   },
-  "main": "./out/extension",
+  "license": "MIT",
+  "publisher": "unional",
+  "main": "../out/extension.js",
   "scripts": {
-    "compile": "tsc -p ./",
+    "compile": "tsc",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "npm run compile && node ./node_modules/vscode/bin/test",
     "vscode:prepublish": "npm run compile",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch",
+    "webpack": "webpack --mode development",
+    "webpack:dev": "webpack --mode development --watch",
+    "webpack:prod": "webpack --mode production"
   },
-  "dependencies": {
-    "read-pkg-up": "^4.0.0",
-    "resolve": "^1.10.0",
-    "sort-package-json": "^1.21.0"
-  },
-  "devDependencies": {
-    "@types/mocha": "^5.2.6",
-    "@types/node": "^11.10.4",
-    "@types/read-pkg-up": "^3.0.1",
-    "@types/resolve": "0.0.8",
-    "tslint": "^5.13.1",
-    "tslint-config-unional": "^0.10.0",
-    "typescript": "^3.3.3333",
-    "vscode": "^1.1.30"
-  },
-  "engines": {
-    "vscode": "^1.25.0"
-  },
-  "activationEvents": [
-    "onCommand:editor.sortPackageJson"
-  ],
-  "categories": [
-    "Other"
-  ],
   "contributes": {
     "commands": [
       {
@@ -50,6 +35,28 @@
       }
     ]
   },
-  "displayName": "Sort package.json",
-  "publisher": "unional"
+  "activationEvents": [
+    "onCommand:editor.sortPackageJson"
+  ],
+  "dependencies": {
+    "read-pkg-up": "^7.0.1",
+    "resolve": "^1.15.1",
+    "sort-package-json": "^1.40.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.7",
+    "@types/read-pkg-up": "^6.0.0",
+    "@types/resolve": "1.14.0",
+    "ts-loader": "^6.2.1",
+    "tslint": "^6.0.0",
+    "tslint-config-unional": "^0.10.0",
+    "typescript": "^3.8.3",
+    "vscode": "^1.1.36",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "engines": {
+    "vscode": "^1.25.0"
+  }
 }

@@ -12,7 +12,7 @@ export function getSortFn(pjson: any, fileName: string) {
 
   const res = readPkgUp.sync({ cwd: path.resolve(dir, '..'), normalize: false })
 
-  if (res.pkg) return getSortFn(res.pkg, res.path)
+  if (res?.packageJson) return getSortFn(res.packageJson, res.path)
 
   return sort;
 }
