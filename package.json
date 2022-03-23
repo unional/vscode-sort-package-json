@@ -52,7 +52,7 @@
     "tslint": "^6.0.0",
     "tslint-config-unional": "^0.10.0",
     "typescript": "^3.8.3",
-    "vscode": "^1.1.36",
+    "vscode": "1.1.37",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   },
