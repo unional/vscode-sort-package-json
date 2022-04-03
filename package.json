@@ -44,17 +44,17 @@
     "sort-package-json": "^1.40.0"
   },
   "devDependencies": {
-    "@types/mocha": "^7.0.1",
-    "@types/node": "^13.7.7",
-    "@types/read-pkg-up": "^6.0.0",
+    "@types/mocha": "7.0.1",
+    "@types/node": "13.7.7",
+    "@types/read-pkg-up": "6.0.0",
     "@types/resolve": "1.14.0",
     "ts-loader": "6.2.2",
-    "tslint": "^6.0.0",
-    "tslint-config-unional": "^0.10.0",
-    "typescript": "^3.8.3",
+    "tslint": "6.0.0",
+    "tslint-config-unional": "0.10.0",
+    "typescript": "3.8.3",
     "vscode": "1.1.37",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack": "4.41.6",
+    "webpack-cli": "3.3.11"
   },
   "engines": {
     "vscode": "^1.25.0"
