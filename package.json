@@ -44,7 +44,7 @@
     "sort-package-json": "^1.40.0"
   },
   "devDependencies": {
-    "@types/mocha": "7.0.1",
+    "@types/mocha": "7.0.2",
     "@types/node": "13.7.7",
     "@types/read-pkg-up": "6.0.0",
     "@types/resolve": "1.14.0",
