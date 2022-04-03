@@ -54,7 +54,7 @@
     "typescript": "3.8.3",
     "vscode": "1.1.37",
     "webpack": "4.41.6",
-    "webpack-cli": "3.3.11"
+    "webpack-cli": "3.3.12"
   },
   "engines": {
     "vscode": "^1.25.0"
