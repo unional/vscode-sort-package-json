@@ -48,7 +48,7 @@
     "@types/node": "^13.7.7",
     "@types/read-pkg-up": "^6.0.0",
     "@types/resolve": "1.14.0",
-    "ts-loader": "^6.2.1",
+    "ts-loader": "6.2.2",
     "tslint": "^6.0.0",
     "tslint-config-unional": "^0.10.0",
     "typescript": "^3.8.3",
