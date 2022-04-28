@@ -1,9 +1,9 @@
-import vscode, { TextEditor, TextEditorEdit } from 'vscode';
-import { getSortFn } from './getSortFn';
+import vscode, { TextEditor, TextEditorEdit } from 'vscode'
+import { getSortFn } from './getSortFn'
 
 export function sortPackageJson(textEditor: TextEditor, edit: TextEditorEdit) {
   if (!textEditor.document.fileName.endsWith('package.json')) {
-    vscode.window.showWarningMessage('Active file is not package.json');
+    vscode.window.showWarningMessage('Active file is not package.json')
     return
   }
 
@@ -21,20 +21,21 @@ export function sortPackageJson(textEditor: TextEditor, edit: TextEditorEdit) {
   }
 }
 
-function tryParseJson(text) {
+function tryParseJson(text: string) {
   try {
     return JSON.parse(text)
   }
   catch (e) {
+    console.error(e)
     return undefined
   }
 }
 
 function getWholeTextRange(textEditor: TextEditor) {
-  const firstLine = textEditor.document.lineAt(0);
-  const lastLine = textEditor.document.lineAt(textEditor.document.lineCount - 1);
+  const firstLine = textEditor.document.lineAt(0)
+  const lastLine = textEditor.document.lineAt(textEditor.document.lineCount - 1)
   return new vscode.Range(0,
     firstLine.range.start.character,
     textEditor.document.lineCount - 1,
-    lastLine.range.end.character);
+    lastLine.range.end.character)
 }

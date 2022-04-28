@@ -1,9 +1,9 @@
 import path from 'path'
 import { readPackageUpSync } from 'read-pkg-up'
 import resolve from 'resolve'
-import sort from 'sort-package-json'
+import sortPackageJsonExports from 'sort-package-json'
 
-export function getSortFn(pjson: any, fileName: string) {
+export function getSortFn(pjson: any, fileName: string): sortPackageJsonExports {
   const dir = path.dirname(fileName)
   if (hasSortPackageJsonPkg(pjson)) {
     const modulePath = resolve.sync('sort-package-json', { basedir: dir })
@@ -14,7 +14,7 @@ export function getSortFn(pjson: any, fileName: string) {
 
   if (res?.packageJson) return getSortFn(res.packageJson, res.path)
 
-  return sort
+  return sortPackageJsonExports
 }
 
 function hasSortPackageJsonPkg(json: any) {
