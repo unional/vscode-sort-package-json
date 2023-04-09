@@ -8,7 +8,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export class CodeActionProvider implements vscode.CodeActionProvider {
-  public provideCodeActions(): ProviderResult<vscode.Command[]> {
+  public provideCodeActions(): vscode.ProviderResult<vscode.Command[]> {
     return [{
       command: 'editor.sortPackageJson',
       title: 'Sort well-known keys in package.json',
