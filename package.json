@@ -18,10 +18,12 @@
   "publisher": "unional",
   "main": "./out/extension.js",
   "scripts": {
-    "compile": "tsc -p ./",
+    "build": "tsc -p ./",
     "lint": "eslint src --ext ts",
     "pretest": "pnpm run compile && pnpm run lint",
+    "release": "echo no release yet",
     "test": "node ./out/test/runTest.js",
+    "verify": "pnpm run test",
     "vscode:prepublish": "pnpm run compile",
     "watch": "tsc -watch -p ./"
   },
