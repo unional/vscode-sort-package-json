@@ -1,4 +1,4 @@
 paths:
-  - ts
+  - src
 paths-ignore:
   - '**/*.spec.ts'
