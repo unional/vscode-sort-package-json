@@ -16,47 +16,44 @@
   },
   "license": "MIT",
   "publisher": "unional",
-  "main": "./out/main.js",
+  "main": "./out/extension.js",
   "scripts": {
-    "compile": "tsc",
-    "esbuild": "npm run esbuild-base -- --sourcemap",
-    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
-    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
-    "test": "npm run compile && node ./out/test/runTest.js",
-    "test-compile": "tsc -p ./",
-    "vscode:prepublish": "npm run esbuild-base -- --minify",
-    "watch": "tsc -watch"
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "test": "node ./out/test/runTest.js",
+    "vscode:prepublish": "pnpm run compile",
+    "watch": "tsc -watch -p ./"
   },
   "contributes": {
     "commands": [
       {
-        "command": "editor.sortPackageJson",
+        "command": "sort-package-json.sort",
         "title": "Sort package.json"
       }
     ]
   },
-  "activationEvents": [
-    "onCommand:editor.sortPackageJson"
-  ],
   "dependencies": {
     "read-pkg-up": "^9.1.0",
     "resolve": "^1.22.0",
     "sort-package-json": "^1.55.0"
   },
   "devDependencies": {
-    "@types/mocha": "9.1.1",
-    "@types/node": "18.11.5",
-    "@types/read-pkg-up": "6.0.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
     "@types/resolve": "1.20.2",
-    "@types/vscode": "1.67.0",
-    "@vscode/test-electron": "^2.1.3",
-    "esbuild": "^0.14.38",
-    "mocha": "10.0.0",
-    "tslint": "6.1.3",
-    "tslint-config-unional": "0.10.0",
-    "typescript": "4.9.3"
+    "@types/vscode": "^1.77.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5"
   },
+  "packageManager": "pnpm@8.2.0",
   "engines": {
-    "vscode": "^1.30.0"
+    "vscode": "^1.77.0"
   }
 }
