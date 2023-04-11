@@ -1,17 +1,4 @@
-# name: pull-request
-# on:
-#   pull_request:
-#     types: [opened, synchronize]
-
-# jobs:
-#   code:
-#     uses: unional/.github/.github/workflows/pnpm-verify.yml@main
-#     with:
-#       os: '["ubuntu-latest"]'
-#       node-version: '[18]'
-
 name: pull-request
-
 on:
   push:
   pull_request:
@@ -23,18 +10,8 @@ permissions:
   packages: read
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8.2.0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-          cache: "pnpm"
-      - run: pnpm install
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: pnpm verify
+  code:
+    uses: unional/.github/.github/workflows/pnpm-verify.yml@main
+    with:
+      os: '["ubuntu-latest"]'
+      node-version: '[18]'
