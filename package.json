@@ -20,10 +20,10 @@
   "scripts": {
     "build": "tsc -p ./",
     "lint": "eslint src --ext ts",
-    "pretest": "pnpm run build && pnpm run lint",
+    "pretest": "pnpm lint && pnpm build",
     "release": "echo no release yet",
     "test": "node ./out/test/runTest.js",
-    "verify": "pnpm run test",
+    "verify": "pnpm lint && pnpm build",
     "vscode:prepublish": "pnpm run build",
     "watch": "tsc -watch -p ./"
   },
