@@ -4,9 +4,7 @@ import { sortPackageJson } from './sortPackageJson'
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
-		vscode.commands.registerTextEditorCommand('editor.sortPackageJson', sortPackageJson)
-	)
-	context.subscriptions.push(
+		vscode.commands.registerTextEditorCommand('editor.sortPackageJson', sortPackageJson),
 		vscode.languages.registerCodeActionsProvider(
 			{ language: 'json', pattern: '**/package.json' },
 			new CodeActionProvider()
@@ -16,15 +14,14 @@ export function activate(context: vscode.ExtensionContext) {
 
 export class CodeActionProvider implements vscode.CodeActionProvider {
 	public provideCodeActions() {
-		return [
-			{
-				title: 'Sort well-known keys in package.json',
-				kind: vscode.CodeActionKind.SourceFixAll,
-				command: {
-					title: 'Sort well-known keys in package.json',
-					command: 'editor.sortPackageJson'
-				}
-			}
-		]
+		const sortPackageJsonCodeAction = new vscode.CodeAction(
+			'Sort well-known keys in package.json',
+			vscode.CodeActionKind.Source.append('sortPackageJson')
+		)
+		sortPackageJsonCodeAction.command = {
+			command: 'editor.sortPackageJson',
+			title: 'Sort well-known keys in package.json'
+		}
+		return [sortPackageJsonCodeAction]
 	}
 }
