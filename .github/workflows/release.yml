@@ -37,7 +37,9 @@ on:
   #         - "no"
   push:
     branches: [main]
-
+  release:
+    types:
+    - created
 jobs:
   code:
     uses: unional/.github/.github/workflows/pnpm-verify.yml@main
@@ -45,11 +47,24 @@ jobs:
       os: '["ubuntu-latest"]'
       node-version: '[18]'
 
-
-  # release:
-  #   uses: unional/.github/.github/workflows/pnpm-release-changeset.yml@main
-  #   needs: code
-  #   secrets: inherit
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 8.2.0
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+        cache: pnpm
+    - run: pnpm install
+    - name: Publish
+      if: success() && startsWith(github.ref, 'refs/tags/')
+      run: pnpm release
+      env:
+        VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
   # docgen:
   #     uses: unional/.github/.github/workflows/pnpm-docs.yml@main
