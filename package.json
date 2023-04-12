@@ -1,7 +1,7 @@
 {
   "name": "vscode-sort-package-json",
   "displayName": "Sort package.json",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Sort package.json",
   "categories": [
     "Other"
@@ -17,7 +17,7 @@
   "license": "MIT",
   "publisher": "unional",
   "type": "commonjs",
-  "main": "./out/extension.js",
+  "main": "./out/main.js",
   "scripts": {
     "build": "tsc -p ./",
     "lint": "eslint src --ext ts",
