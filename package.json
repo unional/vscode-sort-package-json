@@ -21,11 +21,15 @@
   "scripts": {
     "build": "tsc -p ./",
     "lint": "eslint src --ext ts",
-    "release": "echo no release yet",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "pnpm esbuild-base --sourcemap",
+    "esbuild-watch": "pnpm esbuild-base --sourcemap --watch",
+    "package": "pnpm vsce package --no-dependencies",
     "pretest": "pnpm lint && pnpm build",
+    "release": "pnpm vsce publish --no-dependencies",
     "test": "node ./out/test/runTest.js",
     "verify": "pnpm lint && pnpm build",
-    "vscode:prepublish": "pnpm run build",
+    "vscode:prepublish": "pnpm esbuild-base --minify",
     "watch": "tsc -watch -p ./"
   },
   "contributes": {
@@ -50,6 +54,7 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "@vscode/test-electron": "^2.3.0",
+    "esbuild": "^0.17.16",
     "eslint": "^8.36.0",
     "glob": "^10.0.0",
     "mocha": "^10.2.0",
