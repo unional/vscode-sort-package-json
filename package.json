@@ -16,12 +16,13 @@
   },
   "license": "MIT",
   "publisher": "unional",
+  "type": "commonjs",
   "main": "./out/extension.js",
   "scripts": {
     "build": "tsc -p ./",
     "lint": "eslint src --ext ts",
-    "pretest": "pnpm lint && pnpm build",
     "release": "echo no release yet",
+    "pretest": "pnpm lint && pnpm build",
     "test": "node ./out/test/runTest.js",
     "verify": "pnpm lint && pnpm build",
     "vscode:prepublish": "pnpm run build",
@@ -30,15 +31,15 @@
   "contributes": {
     "commands": [
       {
-        "command": "sort-package-json.sort",
+        "command": "editor.sortPackageJson",
         "title": "Sort package.json"
       }
     ]
   },
   "dependencies": {
-    "read-pkg-up": "^9.1.0",
+    "read-pkg-up": "^7.0.1",
     "resolve": "^1.22.0",
-    "sort-package-json": "^2.0.0"
+    "sort-package-json": "^1.57.0"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
