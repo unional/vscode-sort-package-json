@@ -20,7 +20,7 @@ To sort all `package.json` files automatically on save, configure your user sett
 2. Select `Preferences: Open User Settings (JSON)`
 3. Add `"source.sortPackageJson"` to `"editor.codeActionsOnSave"` as shown below
 
-```json
+```json5
   "editor.codeActionsOnSave": [
     // Sort package.json keys
     "source.sortPackageJson"
