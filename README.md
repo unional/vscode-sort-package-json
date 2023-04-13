@@ -22,7 +22,7 @@ To sort all `package.json` files automatically on save, configure your user sett
 
 ```json5
   "editor.codeActionsOnSave": [
-    // Sort package.json keys
+    // Sort package.json keys with https://marketplace.visualstudio.com/items?itemName=unional.vscode-sort-package-json
     "source.sortPackageJson"
   ],
 ```
