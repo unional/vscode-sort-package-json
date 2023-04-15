@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/unional/vscode-sort-package-json/compare/v1.4.4...v1.5.0) (2023-04-15)
+
+
+### Features
+
+* show command only for package.json ([e24bb84](https://github.com/unional/vscode-sort-package-json/commit/e24bb8414223b5ae207da74a27a53cd86c315689))
+
 ## [1.4.4](https://github.com/unional/vscode-sort-package-json/compare/v1.4.3...v1.4.4) (2023-04-15)
 
 
