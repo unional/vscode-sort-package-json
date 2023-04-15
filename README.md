@@ -4,7 +4,7 @@ A [Visual Studio Code extension][marketplace] to sort package.json with [sort-pa
 
 ## Features
 
-This extension will sort your package.json sensibly.
+Sort your package.json sensibly.
 
 ### Sort Manually
 
