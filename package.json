@@ -1,7 +1,7 @@
 {
   "name": "vscode-sort-package-json",
   "displayName": "Sort package.json",
-  "version": "1.4.3",
+  "version": "0.0.0-development",
   "description": "Sort package.json",
   "categories": [
     "Other"
