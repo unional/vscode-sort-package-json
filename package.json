@@ -26,7 +26,7 @@
     "esbuild-watch": "pnpm esbuild-base --sourcemap --watch",
     "package": "pnpm vsce package --no-dependencies",
     "pretest": "pnpm lint && pnpm build",
-    "release": "pnpm vsce publish --no-dependencies",
+    "publish": "pnpm vsce publish --no-dependencies",
     "test:old": "node ./out/test/runTest.js",
     "test": "jest",
     "verify": "pnpm lint && pnpm build",
