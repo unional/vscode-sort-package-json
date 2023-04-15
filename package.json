@@ -52,6 +52,8 @@
   "devDependencies": {
     "@jest/globals": "^29.5.0",
     "@repobuddy/jest": "^3.1.5",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",
