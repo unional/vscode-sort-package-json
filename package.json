@@ -17,7 +17,7 @@
 	"license": "MIT",
 	"publisher": "unional",
 	"type": "commonjs",
-	"main": "./out/main.js",
+	"main": "./out/extension.js",
 	"scripts": {
 		"build": "tsc -p ./",
 		"lint": "eslint src --ext ts",
