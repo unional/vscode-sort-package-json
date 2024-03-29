@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../.github"
+		},
+		{
+			"path": "../sort-package-json"
 		}
 	],
 	"settings": {
