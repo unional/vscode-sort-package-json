@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/unional/vscode-sort-package-json/compare/v1.5.1...v1.5.2) (2024-03-29)
+
+
+### Bug Fixes
+
+* add icon ([43bb8e9](https://github.com/unional/vscode-sort-package-json/commit/43bb8e9a6592992917c24cb40f61b83bc056c38a))
+
 ## [1.5.1](https://github.com/unional/vscode-sort-package-json/compare/v1.5.0...v1.5.1) (2024-03-29)
 
 
