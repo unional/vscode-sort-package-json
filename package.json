@@ -20,15 +20,15 @@
 	"main": "./out/main.js",
 	"scripts": {
 		"build": "tsc -p ./",
-		"lint": "eslint src --ext ts",
-		"esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
 		"esbuild": "pnpm esbuild-base --sourcemap",
+		"esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
 		"esbuild-watch": "pnpm esbuild-base --sourcemap --watch",
+		"lint": "eslint src --ext ts",
 		"package": "pnpm vsce package --no-dependencies",
-		"pretest": "pnpm lint && pnpm build",
 		"publish": "pnpm vsce publish --no-dependencies",
-		"test:old": "node ./out/test/runTest.js",
+		"pretest": "pnpm lint && pnpm build",
 		"test": "jest",
+		"test:old": "node ./out/test/runTest.js",
 		"verify": "pnpm lint && pnpm build",
 		"vscode:prepublish": "pnpm esbuild-base --minify",
 		"watch": "tsc -watch -p ./"
@@ -88,6 +88,7 @@
 	"engines": {
 		"vscode": "^1.77.0"
 	},
+	"icon": "./resources/icons/icon.png",
 	"vsce": {
 		"dependencies": false
 	}
