@@ -1,3 +1,13 @@
+## [1.5.1](https://github.com/unional/vscode-sort-package-json/compare/v1.5.0...v1.5.1) (2024-03-29)
+
+
+### Bug Fixes
+
+* indent based  on the editor option ([0153110](https://github.com/unional/vscode-sort-package-json/commit/0153110743b1ac99100a59fbaf028d4a2e9343d6))
+* main ref ([26b1e67](https://github.com/unional/vscode-sort-package-json/commit/26b1e6736b75f27fcb2695e7c5b34b768d95532c))
+* return type of getSortFn ([19e7914](https://github.com/unional/vscode-sort-package-json/commit/19e7914a734370ef4f7bbe73c102c81b82d8807b))
+* use tabSize ([bf28ec0](https://github.com/unional/vscode-sort-package-json/commit/bf28ec0cc9ced250faf368e3d5f89dfe0d86d591))
+
 # [1.5.0](https://github.com/unional/vscode-sort-package-json/compare/v1.4.4...v1.5.0) (2023-04-15)
 
 
