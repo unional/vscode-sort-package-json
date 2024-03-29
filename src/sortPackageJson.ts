@@ -13,7 +13,7 @@ export function sortPackageJson(textEditor: TextEditor, edit: TextEditorEdit) {
 	if (json) {
 		const sort = getSortFn(json, textEditor.document.fileName)
 		const text = getWholeTextRange(textEditor)
-		edit.replace(text, JSON.stringify(sort(json), null, textEditor.options.insertSpaces ? 2 : '\t'))
+		edit.replace(text, JSON.stringify(sort(json), null, textEditor.options.insertSpaces ? textEditor.options.tabSize : '\t'))
 		// insert newline if previously present
 		if (text.end.character === 0) {
 			edit.insert(text.end, '\n')
