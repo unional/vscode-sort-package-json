@@ -45,7 +45,7 @@ jobs:
     uses: unional/.github/.github/workflows/pnpm-verify.yml@main
     with:
       os: '["ubuntu-latest"]'
-      node-version: '[18]'
+      node-version: '[20]'
 
   release:
     runs-on: ubuntu-latest
@@ -61,7 +61,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 18
+        node-version: 20
         cache: pnpm
     - run: pnpm install
     - run: pnpm esbuild-base --minify
