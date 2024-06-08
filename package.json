@@ -55,7 +55,7 @@
 	"dependencies": {
 		"read-pkg-up": "^7.0.1",
 		"resolve": "^1.22.0",
-		"sort-package-json": "^1.57.0"
+		"sort-package-json": "^2.0.0"
 	},
 	"devDependencies": {
 		"@jest/globals": "^29.5.0",
