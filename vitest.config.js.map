@@ -1,0 +1,1 @@
+{"version":3,"file":"vitest.config.js","sourceRoot":"","sources":["vitest.config.ts"],"names":[],"mappings":";;AAAA,0CAA4C;AAE5C,kBAAe,IAAA,qBAAY,EAAC;IAC3B,IAAI,EAAE;QACL,OAAO,EAAE,IAAI;QACb,WAAW,EAAE,MAAM;QACnB,OAAO,EAAE,CAAC,kBAAkB,CAAC;QAC7B,OAAO,EAAE,CAAC,UAAU,EAAE,mBAAmB,CAAC;KAC1C;CACD,CAAC,CAAA"}

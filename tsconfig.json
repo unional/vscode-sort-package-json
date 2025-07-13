@@ -12,5 +12,8 @@
 		"rootDir": "src",
 		"strict": true,
 		"skipLibCheck": true
-	}
+	},
+	"exclude": [
+		"vitest.config.ts"
+	]
 }

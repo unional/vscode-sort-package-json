@@ -23,7 +23,7 @@ function tryLoadSortPackageJson(dir: string, pjson: Record<string, any>): typeof
 			const sortPackageJson = require(modulePath)
 			if (typeof sortPackageJson === 'function') return sortPackageJson
 			if (sortPackageJson?.default && typeof sortPackageJson === 'function') return sortPackageJson.default
-			if (sortPackageJson?.sortPacakgeJson && typeof sortPackageJson?.sortPacakgeJson === 'function')
+			if (sortPackageJson?.sortPackageJson && typeof sortPackageJson?.sortPackageJson === 'function')
 				return sortPackageJson.sortPackageJson
 			return undefined
 		}
