@@ -56,8 +56,6 @@ jobs:
         fetch-depth: 0
         token: ${{ secrets.CI_GITHUB_TOKEN }}
     - uses: pnpm/action-setup@v3
-      with:
-        version: 8.15.5
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
