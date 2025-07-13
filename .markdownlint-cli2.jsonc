@@ -1,6 +1,7 @@
 {
 	"ignores": [".changeset/*.md", "**/CHANGELOG.md", "**/LICENSE"],
 	"config": {
-		"hard_tab": false
+		"hard_tab": false,
+		"no-inline-html": false
 	}
 }
