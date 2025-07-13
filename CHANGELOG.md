@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/unional/vscode-sort-package-json/compare/v1.5.2...v1.5.3) (2025-07-13)
+
+
+### Bug Fixes
+
+* releasing on Open VSX ([aeee435](https://github.com/unional/vscode-sort-package-json/commit/aeee435a5f9fe05ab9b5288872e6a47d5658493a))
+
 ## [1.5.2](https://github.com/unional/vscode-sort-package-json/compare/v1.5.1...v1.5.2) (2024-03-29)
 
 
