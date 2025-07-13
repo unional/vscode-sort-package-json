@@ -72,7 +72,7 @@
 		"@vscode/vsce": "^3.0.0",
 		"esbuild": "^0.25.6",
 		"eslint": "^8.36.0",
-		"glob": "^10.0.0",
+		"glob": "^11.0.0",
 		"mocha": "^10.2.0",
 		"semantic-release-vsce": "^6.0.10",
 		"typescript": "^5.8.3",
