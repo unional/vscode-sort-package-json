@@ -66,6 +66,7 @@ jobs:
         node-version: 24
         cache: pnpm
     - run: pnpm install
+    - run: pnpm add -g ovsx
     - run: pnpm esbuild-base --minify
     - name: Publish
       # if: success() && startsWith(github.ref, 'refs/tags/')
