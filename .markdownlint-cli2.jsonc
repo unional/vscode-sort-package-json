@@ -1,0 +1,6 @@
+{
+	"ignores": [".changeset/*.md", "**/CHANGELOG.md", "**/LICENSE"],
+	"config": {
+		"hard_tab": false
+	}
+}
