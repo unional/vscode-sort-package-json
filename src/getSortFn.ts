@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import { sync } from 'read-pkg-up'
 import resolve from 'resolve'
 import sortPackageJsonExports from 'sort-package-json'
