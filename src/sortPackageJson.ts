@@ -1,9 +1,11 @@
-import { Range, TextEditor, TextEditorEdit, window } from 'vscode'
+import { Range, TextEditor, TextEditorEdit } from 'vscode'
 import { getSortFn } from './getSortFn'
 
 export function sortPackageJson(textEditor: TextEditor, edit: TextEditorEdit) {
 	if (!textEditor.document.fileName.endsWith('package.json')) {
-		window.showWarningMessage('Active file is not package.json')
+		console.info(
+			`editor.sortPackageJson is invoked but active file is ${textEditor.document.fileName} and not package.json. This is a concurrency bug from vscode.`
+		)
 		return
 	}
 
