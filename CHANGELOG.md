@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/unional/vscode-sort-package-json/compare/v1.5.3...v1.5.4) (2025-07-14)
+
+
+### Bug Fixes
+
+* change warning message to console log ([#109](https://github.com/unional/vscode-sort-package-json/issues/109)) ([6ee1633](https://github.com/unional/vscode-sort-package-json/commit/6ee16332b2412e54c26befc584afddf2fbb6c2e4))
+
 ## [1.5.3](https://github.com/unional/vscode-sort-package-json/compare/v1.5.2...v1.5.3) (2025-07-13)
 
 
