@@ -1,6 +1,6 @@
 import { createRequire } from 'node:module'
 import path from 'node:path'
-import { sync } from 'read-pkg-up'
+import { readPackageUpSync } from 'read-package-up'
 import sortPackageJsonExports from 'sort-package-json'
 
 export function getSortFn(pjson: any, fileName: string): typeof sortPackageJsonExports {
@@ -9,7 +9,7 @@ export function getSortFn(pjson: any, fileName: string): typeof sortPackageJsonE
 	const sortPackageJson = tryLoadSortPackageJson(dir, pjson)
 	if (sortPackageJson) return sortPackageJson
 
-	const res = sync({ cwd: path.resolve(dir, '..'), normalize: false })
+	const res = readPackageUpSync({ cwd: path.resolve(dir, '..'), normalize: false })
 
 	if (res?.packageJson) return getSortFn(res.packageJson, res.path)
 
