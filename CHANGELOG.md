@@ -1,3 +1,11 @@
+## [1.6.1](https://github.com/unional/vscode-sort-package-json/compare/v1.6.0...v1.6.1) (2026-05-17)
+
+
+### Bug Fixes
+
+* **deps:** replace dependency read-pkg-up with read-package-up ^11.0.0 ([766b038](https://github.com/unional/vscode-sort-package-json/commit/766b038518bec33bf4df6d195a365bd58594d8f5))
+* update import to use read-package-up API ([4a956e6](https://github.com/unional/vscode-sort-package-json/commit/4a956e6760a60457a1fee764165bdc525ab5f6a8))
+
 # [1.6.0](https://github.com/unional/vscode-sort-package-json/compare/v1.5.4...v1.6.0) (2026-05-17)
 
 
