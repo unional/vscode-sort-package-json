@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/unional/vscode-sort-package-json/compare/v1.6.1...v1.6.2) (2026-05-17)
+
+
+### Bug Fixes
+
+* migrate ESLint config to flat config for v10 ([0339da9](https://github.com/unional/vscode-sort-package-json/commit/0339da93394ac5f5aa0f93cf377397c95fee39b1))
+
 ## [1.6.1](https://github.com/unional/vscode-sort-package-json/compare/v1.6.0...v1.6.1) (2026-05-17)
 
 
