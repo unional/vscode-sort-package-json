@@ -24,7 +24,7 @@
 		"esbuild": "pnpm esbuild-base --sourcemap",
 		"esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
 		"esbuild-watch": "pnpm esbuild-base --sourcemap --watch",
-		"lint": "eslint src --ext ts",
+		"lint": "eslint src",
 		"package": "pnpm vsce package --no-dependencies",
 		"publish": "pnpm vsce publish --no-dependencies",
 		"pretest": "pnpm lint && pnpm build",
