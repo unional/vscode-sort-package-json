@@ -1,6 +1,6 @@
+import { createRequire } from 'node:module'
 import path from 'node:path'
 import { sync } from 'read-pkg-up'
-import resolve from 'resolve'
 import sortPackageJsonExports from 'sort-package-json'
 
 export function getSortFn(pjson: any, fileName: string): typeof sortPackageJsonExports {
@@ -19,12 +19,11 @@ export function getSortFn(pjson: any, fileName: string): typeof sortPackageJsonE
 function tryLoadSortPackageJson(dir: string, pjson: Record<string, any>): typeof sortPackageJsonExports | undefined {
 	try {
 		if (hasSortPackageJsonPkg(pjson)) {
-			const modulePath = resolve.sync('sort-package-json', { basedir: dir })
-			const sortPackageJson = require(modulePath)
-			if (typeof sortPackageJson === 'function') return sortPackageJson
-			if (sortPackageJson?.default && typeof sortPackageJson === 'function') return sortPackageJson.default
-			if (sortPackageJson?.sortPackageJson && typeof sortPackageJson?.sortPackageJson === 'function')
-				return sortPackageJson.sortPackageJson
+			const localRequire = createRequire(path.join(dir, 'package.json'))
+			const loaded = localRequire('sort-package-json')
+			if (typeof loaded === 'function') return loaded
+			if (loaded?.default && typeof loaded.default === 'function') return loaded.default
+			if (loaded?.sortPackageJson && typeof loaded?.sortPackageJson === 'function') return loaded.sortPackageJson
 			return undefined
 		}
 	} catch (e) {
