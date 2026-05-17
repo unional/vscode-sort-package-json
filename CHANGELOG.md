@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/unional/vscode-sort-package-json/compare/v1.5.4...v1.6.0) (2026-05-17)
+
+
+### Features
+
+* update sort-package-json to 3.6.1 ([383f6ae](https://github.com/unional/vscode-sort-package-json/commit/383f6ae4e9acca3070c0a2d3f41ab77cf135134e))
+
 ## [1.5.4](https://github.com/unional/vscode-sort-package-json/compare/v1.5.3...v1.5.4) (2025-07-14)
 
 
