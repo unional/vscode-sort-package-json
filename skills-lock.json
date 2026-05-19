@@ -7,6 +7,12 @@
       "skillPath": "skills/create-skill/SKILL.md",
       "computedHash": "6f7a5b9959fb330b0fa8308dadca1df6bb654b578aedeb976fb445c62b31f5eb"
     },
+    "fix-security-pr": {
+      "source": "repobuddy/agent-security",
+      "sourceType": "github",
+      "skillPath": "skills/fix-security-pr/SKILL.md",
+      "computedHash": "d78b2e51db20d5e19948faa0428ef3a1d51efed14706d4dc58cea2dfc6ef6530"
+    },
     "init": {
       "source": "cyberuni/agent-helmsman",
       "sourceType": "github",
