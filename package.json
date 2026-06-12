@@ -55,7 +55,7 @@
 	],
 	"dependencies": {
 		"read-package-up": "^11.0.0",
-		"sort-package-json": "^3.6.1"
+		"sort-package-json": "^4.0.0"
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^6.0.3",
